@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Subtle starry gradient background */
+body {
+  background: radial-gradient(1200px 800px at 75% 25%, rgba(24,24,60,0.35), transparent 60%),
+              radial-gradient(1200px 900px at 20% 80%, rgba(40,20,60,0.25), transparent 60%),
+              #000;
+}
+
+/* Glass card */
+.glass {
+  @apply bg-white/5 backdrop-blur border border-white/10 rounded-2xl shadow-glow;
+}
+
+/* Neon button */
+.btn-neon {
+  @apply px-5 py-3 rounded-xl font-semibold transition;
+  box-shadow: 0 0 20px rgba(120,120,255,0.25);
+}
+.btn-neon:hover { box-shadow: 0 0 28px rgba(120,120,255,0.45); }
