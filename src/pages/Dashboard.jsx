@@ -20,7 +20,7 @@ export default function Dashboard() {
     const loadData = async () => {
       try {
         setIsLoading(true)
-        const response = await fetch('/data/dashboard.html')
+        const response = await fetch(`${import.meta.env.BASE_URL}data/dashboard.html`)
         if (!response.ok) throw new Error('Failed to load data')
         
         const htmlContent = await response.text()

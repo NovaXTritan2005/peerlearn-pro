@@ -17,7 +17,7 @@ export default function ResearchIndex() {
     const loadData = async () => {
       try {
         setIsLoading(true)
-        const response = await fetch('/data/index.html')
+        const response = await fetch(`${import.meta.env.BASE_URL}data/index.html`)
         if (!response.ok) throw new Error('Failed to load data')
         
         const htmlContent = await response.text()
