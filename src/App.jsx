@@ -2,23 +2,25 @@ import React from 'react'
 import { Routes, Route } from 'react-router-dom'
 import NavBar from './components/NavBar'
 import Footer from './components/Footer'
+import EinsteinIntro from './components/EinsteinIntro'
 import Home from './pages/Home'
-import Pods from './pages/Pods'
+import ResearchIndex from './pages/ResearchIndex'
 import Dashboard from './pages/Dashboard'
-import Projects from './pages/Projects'
-import Contact from './pages/Contact'
+import Methodology from './pages/Methodology'
+import About from './pages/About'
 
 export default function App() {
   return (
     <div className="min-h-screen flex flex-col bg-cosmic-900">
+      <EinsteinIntro />
       <NavBar />
       <main className="flex-1">
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/pods" element={<Pods />} />
+          <Route path="/index" element={<ResearchIndex />} />
           <Route path="/dashboard" element={<Dashboard />} />
-          <Route path="/projects" element={<Projects />} />
-          <Route path="/contact" element={<Contact />} />
+          <Route path="/methodology" element={<Methodology />} />
+          <Route path="/about" element={<About />} />
         </Routes>
       </main>
       <Footer />

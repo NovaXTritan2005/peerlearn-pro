@@ -1,5 +1,34 @@
 <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 128 128'>
-  <defs><radialGradient id='g' cx='50%' cy='50%' r='50%'><stop offset='0%' stop-color='#000'/><stop offset='70%' stop-color='#000'/><stop offset='100%' stop-color='#3643ff'/></radialGradient></defs>
-  <circle cx='64' cy='64' r='62' fill='url(#g)'/>
-  <circle cx='64' cy='64' r='18' fill='#000'/>
+  <defs>
+    <radialGradient id='space' cx='50%' cy='50%' r='60%'>
+      <stop offset='0%' stop-color='#1e1b4b'/>
+      <stop offset='40%' stop-color='#4c1d95'/>
+      <stop offset='100%' stop-color='#000'/>
+    </radialGradient>
+    <radialGradient id='telescope' cx='50%' cy='50%' r='40%'>
+      <stop offset='0%' stop-color='#6366f1'/>
+      <stop offset='100%' stop-color='#4338ca'/>
+    </radialGradient>
+  </defs>
+  <!-- Space background -->
+  <circle cx='64' cy='64' r='62' fill='url(#space)'/>
+  <!-- Stars -->
+  <circle cx='20' cy='30' r='1.5' fill='#fff' opacity='0.8'/>
+  <circle cx='100' cy='25' r='1' fill='#fff' opacity='0.6'/>
+  <circle cx='110' cy='45' r='1.5' fill='#fff' opacity='0.9'/>
+  <circle cx='25' cy='85' r='1' fill='#fff' opacity='0.7'/>
+  <circle cx='95' cy='90' r='1.5' fill='#fff' opacity='0.8'/>
+  <!-- Telescope icon -->
+  <g transform='translate(64,64)'>
+    <!-- Telescope body -->
+    <rect x='-18' y='-3' width='24' height='6' rx='3' fill='url(#telescope)'/>
+    <!-- Telescope lens -->
+    <circle cx='-18' cy='0' r='5' fill='#8b5cf6' opacity='0.8'/>
+    <!-- Telescope eyepiece -->
+    <rect x='6' y='-2' width='8' height='4' rx='2' fill='url(#telescope)'/>
+    <!-- Research data points -->
+    <circle cx='18' cy='-8' r='2' fill='#06b6d4' opacity='0.6'/>
+    <circle cx='15' cy='10' r='1.5' fill='#06b6d4' opacity='0.7'/>
+    <circle cx='22' cy='5' r='1' fill='#06b6d4' opacity='0.5'/>
+  </g>
 </svg>
